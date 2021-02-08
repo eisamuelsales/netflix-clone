@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+
+    <!--owl css-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    <!--responsivadade-->
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <title>NETFLIX CLONE</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+            <div class="melhorias">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-gift"></i>
+                <i class="fas fa-bell"></i>     <!--adicionei a div melhorias para por uns icones -->
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="filme-principal">
+            <div style="background-image:url(/img/1-capa-principal-peaky-blinders.jpg)"></div>
+            <div class="container">
+                <h3 class="titulo">PEAKY BLINDERS</h3>
+                <p class="descricao">Thomas Shelby e seus irmãos retornam a Birmingham depois de servir no exército britânico durante a Primeira Guerra Mundial. Os Peaky Blinders, a gangue na qual Thomas é líder e controlam a cidade de Birmingham.</p>
+                <div class="botoes">
+                    <button role="button" class="botao" onclick="window.location.href='https://www.youtube.com/watch?v=oVzVdvGIC7U'"> <!-- o comando role="button" garante que o botao vai ser redenrizado de forma correta em qualquer navegador-->
+                        <i class="fas fa-play"></i> <!-- para aparecer o simbolo de play no botao, o desenho, precisa do link js la em baixo.-->
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao" onclick="window.location.href='http://www.adorocinema.com/series/serie-11303/'">
+                        <i class="fas fa-info-circle"></i> <!-- para aparecer o simbolo de informacoes no botao,precisa do link js la em baixo-->
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+        </div> 
+    </main>
+
+    <div class="carousel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/capa-dark.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/capa-o-gambito-da-rainha.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/capa-stranger-things.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/capa-mindhunter.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/capa-altered-carbon.jpg" alt="" srcset="">
+            </div>
+            <div>
+                <img class="box-filme" src="img/capa-ozark.jpg" alt="" srcset="">
+            </div>
+            <div>
+                <img class="box-filme" src="img/capa-the-umbrella-academy.jpg" alt="" srcset="">
+            </div>
+            <div>
+                <img class="box-filme" src="img/capa-the-last-kingdom.jpg" alt="" srcset="">
+            </div>
+            <div>
+                <img class="box-filme" src="img/capa-bridgerton.jpg" alt="" srcset="">
+            </div>
+            <div>
+                <img class="box-filme" src="img/capa-sex-education.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/3e4698c981.js" crossorigin="anonymous"></script>
+    <!--owl js-->
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
+
+</body>
+</html>

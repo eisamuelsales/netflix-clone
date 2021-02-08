@@ -1,0 +1,15 @@
+@media screen and (max-width: 700px){
+    header .container{
+        display: flex; /*comando display flex e flex-direction column vao jogar os itens para baixo;*/
+        flex-direction: column;
+    }
+    .botao{
+        margin-top: 5px;
+        width: 190px;
+    }
+}
+@media screen and (min-width: 1000px){
+    .descricao{
+        width: 50%;
+    }
+}

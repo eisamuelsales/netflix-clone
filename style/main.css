@@ -1,0 +1,109 @@
+:root{  /*declaração de variavel*/
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*o limite de tudo que está dentro é a caixa, ou box.*/
+}
+
+/*elementos base*/
+body{
+    background: var(--preta); /*exemplo de utilizacao da variavel*/
+    font-family: 'Arial', Times, serif; /*fonte padrão*/
+    color: white; /*mudou cor da fonte*/
+}
+header .container{
+    position: fixed; /*mudei para ficar mais parecido com a Netflix como é hoje, sem barra preta*/
+    display: flex;  /*jogou o menu para cima, fica alinhado com a linha*/
+    flex-direction: row; /*serve para definir onde o flex vai ficar direcionado, por padrão é row, mesmo assim botou*/
+    align-items: center; /*alinhar menu ao centro*/
+    /*justify-content:space-between; serve para justificar onde os elementos vao ficar, no caso deu espaço entre o titulo do site e o menu*/
+}
+header .logo{
+    margin-right: 50px; /*eu que pus*/
+    margin-left: 5px; /*por um pouco mais de distancia entre o titulo do site e o menu*/
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px; /*distancia entre os menus*/
+}
+header nav a:hover{ /*serve para quando passar a seta pelas opções do menu, as mesmas vão mudar de cor*/
+    color: #AAA;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/1-capa-principal-peaky-blinders.jpg'); 
+    /*a propriedade linear-gradiente com rgba deixou a imagem mais escura, com transparencia,criou camada fina por cima da imagem.*/
+    height: 500px; /*tamanho da imagem*/
+    background-size: cover; /*fez a imagem pegar area de cobertura da caixa*/
+    display: flex;
+    flex-direction: column; /*como dito antes o display flex costuma jogar os itens em linha, no column como proprio nome já diz, fica em coluna*/
+    justify-content: center; /*segue a direcao do flex-direction, no caso ele ficou centralizado, por que botou center*/
+    align-items: flex-start; /*faz com que os elementos comecem sempre da esquerda*/
+}
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px; /*deu destanciamento entre os botoes e a descricao*/
+}
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 15px 30px; /*lembrando que padding lida com o espaço interno do elemento*/
+    margin-right: 15px; /*aumentar os espaços entre os botões*/
+    font-size: 12px;
+    cursor: pointer; /*para mostrar que tem algo clicavel, botao*/
+    transition: .3s ease all; /*tempo de transicao, ao passar a seta pelos botoes*/
+}
+.botao:hover{
+    background-color: white;  /*inverte as cores, o que é preto vira branco, e o que branco vira preto, com a seta em cima*/
+    color: black;
+}
+.botao i{
+    margin-right: 5px; /*espacamento entre o simbolo dos botoes referenciado por 'i' e o nome dos botoes*/
+}
+.container{
+    margin-left: 30px;
+}
+.filme-principal .container{
+    width: 90%;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.3s ease; /* melhorei para quando passar a seta por cima as imagens das series, da um zoom*/
+    transition: transform 0.3s ease;
+}
+.box-filme:hover{
+    -webkit-transform: scale(1.1); /* melhorei para quando passar a seta por cima as imagens das series, da um zoom*/
+    transform: scale(1.1);
+}
+.carousel-filmes{
+    margin-top: 5px;
+}
+
+header .melhorias{  
+    position: fixed;
+    right: 0;
+    top: 7%;
+    width: 10em;
+    margin-top: -2.5em;
+}
+header .melhorias i{
+    margin-right: 15px;
+}
